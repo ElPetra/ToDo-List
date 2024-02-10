@@ -27,6 +27,7 @@
   padding: 24px 0 0;
   max-width: 594px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .container {
   max-width: 546px;
@@ -34,7 +35,7 @@
 }
 .main__up {
   border-bottom: rgb(222, 226, 230) solid 1px;
-  padding-bottom: 24px;
+  /* padding-bottom: 24px; */
 }
 .form {
   display: flex;
@@ -48,7 +49,7 @@ input::placeholder {
   line-height: 21px;
   letter-spacing: 0%;
   text-align: left;
-  margin-left: 13px;
+  padding-left: 13px;
 }
 input {
   box-sizing: border-box;
@@ -73,6 +74,9 @@ input {
   border-radius: 4px;
   border: none;
   margin-bottom: 18px;
+}
+.btn:hover {
+  cursor: pointer;
 }
 input[type="checkbox"] {
   width: 16px;
@@ -99,6 +103,34 @@ input[type="checkbox"] {
   line-height: 21px;
   letter-spacing: 0%;
   text-align: left;
+  margin-left: 24px;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.checkbox:checked + .check__box {
+  border-radius: 2px;
+  background: rgb(119, 73, 248);
+  background-image: url(./checkbox.svg);
+}
+.check__box {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(171, 181, 190);
+  border-radius: 2px;
+  background: rgb(255, 255, 255);
+}
+.cross {
+  border: none;
+  background: transparent;
+}
+.cross:hover {
+  cursor: pointer;
 }
 .btns {
   background-color: rgb(245, 245, 245);
@@ -119,10 +151,15 @@ input[type="checkbox"] {
   background-color: rgb(220, 53, 69);
   margin-top: 24px;
 }
-.checkbox:checked {
-  background-color: rgb(119, 73, 248);
+.option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .text_checked {
-opacity: 0.5;
-text-decoration-line: line-through;
+  opacity: 0.5;
+  text-decoration-line: line-through;
+}
+.d-none {
+  display: none;
 }

@@ -59,6 +59,7 @@ input {
   max-width: 356px;
   height: 38px;
   width: 100%;
+  padding-left: 10px;
 }
 .btn {
   padding: 10px 16px;
@@ -115,7 +116,10 @@ input[type="checkbox"] {
 .checkbox:checked + .check__box {
   border-radius: 2px;
   background: rgb(119, 73, 248);
-  background-image: url(./checkbox.svg);
+  background-image: url(./check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
 }
 .check__box {
   position: absolute;

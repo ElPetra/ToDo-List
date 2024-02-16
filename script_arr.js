@@ -28,23 +28,23 @@ let createContent = (text) => {
   inputNode.value = "";
 };
 
-function addLS(text) {
+let changeLS = (text) => {
   arr.push(text);
-  LS.setItem("x", arr);
-}
+  LS.setItem("toDo", arr);
+};
 
 let deleteItem = (item) => {
   let value = item.closest(".content").querySelector(".text").innerText;
   arr.splice(arr.indexOf(value), 1);
-  LS.setItem("x", arr);
+  LS.setItem("toDo", arr);
   item.closest(".content").remove();
   if (arr.length === 0) {
-  btnsNode.classList.add("d-none");
+    btnsNode.classList.add("d-none");
   }
-}
+};
 
 if (LS.x) {
-  arr = LS.getItem("x").split(",");
+  arr = LS.getItem("toDo").split(",");
   for (let el of arr) {
     createContent(el);
   }
@@ -74,14 +74,14 @@ formNode.addEventListener("submit", function (event) {
   event.preventDefault();
   if (inputNode.value) {
     btnsNode.classList.remove("d-none");
-    addLS(inputNode.value);
+    changeLS(inputNode.value);
     createContent(inputNode.value);
   }
 });
 
 btnDelAll.addEventListener("click", function () {
   container.innerHTML = "";
-  LS.removeItem("x");
+  LS.removeItem("toDo");
   arr = [];
   btnsNode.classList.add("d-none");
 });

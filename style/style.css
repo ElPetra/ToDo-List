@@ -30,13 +30,16 @@ body {
   margin: 0 auto;
   overflow: hidden;
 }
+.list {
+  padding: 0 24px;
+}
 .container {
   max-width: 546px;
   margin: 0 auto;
 }
 .main__up {
   border-bottom: rgb(222, 226, 230) solid 1px;
-  /* padding-bottom: 24px; */
+  padding: 0 24px;
 }
 .form {
   display: flex;
@@ -75,7 +78,7 @@ input {
   border-radius: 4px;
   border: none;
   margin-bottom: 18px;
-}
+ }
 .btn:hover {
   cursor: pointer;
 }
@@ -138,6 +141,7 @@ input[type="checkbox"] {
 .btns {
   background-color: rgb(245, 245, 245);
   margin-top: 24px;
+  padding: 0 24px;
 }
 .container_btns {
   display: flex;
@@ -163,6 +167,61 @@ input[type="checkbox"] {
   opacity: 0.5;
   text-decoration-line: line-through;
 }
-.d-none {
+.modal, .d-none {
   display: none;
+}
+@media (max-width: 510px) {
+  .main {
+    padding: 30px 10px;
+  }
+  .title {
+    font-size: 38px;
+    /* padding-bottom: 13px; */
+  }
+  input::placeholder {
+    font-size: 13px;
+  }
+  .text {
+    font-size: 13px;
+  }
+  .btn {
+    padding: 5px 8px;
+    font-size: 13px;
+    width: max-content;
+  }
+  .btn_grey {
+    min-width: 150px;
+    margin-top: 24px;
+  }
+  input {
+    height: 28px;
+    width: 100%;
+    padding-left: 7px;
+  }
+}
+@media (max-width: 440px) {
+  .modal {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+  }
+  .main {
+    display: none;
+  }
+  .text__modul {
+    color: rgb(0, 0, 0);
+    font-family: "Inter", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 33px;
+  }
+}
+@media (min-width: 439px) and (orientation: landscape) {
+  .modal {
+    display: none;
+}
 }

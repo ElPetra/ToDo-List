@@ -78,15 +78,20 @@ input {
   border-radius: 4px;
   border: none;
   margin-bottom: 18px;
- }
+}
 .btn:hover {
   cursor: pointer;
+  transition: 1s;
+  opacity: 0.6;
 }
 input[type="checkbox"] {
   width: 16px;
   height: 16px;
   border: 1px solid rgb(171, 181, 190);
   border-radius: 2px;
+}
+input[type="checkbox"] + .check__box:hover {
+  cursor: pointer;
 }
 .content {
   margin-top: 23px;
@@ -137,6 +142,8 @@ input[type="checkbox"] {
 }
 .cross:hover {
   cursor: pointer;
+  transition: 1s;
+  opacity: 0.5;
 }
 .btns {
   background-color: rgb(245, 245, 245);
@@ -167,7 +174,8 @@ input[type="checkbox"] {
   opacity: 0.5;
   text-decoration-line: line-through;
 }
-.modal, .d-none {
+.modal,
+.d-none {
   display: none;
 }
 @media (max-width: 510px) {
@@ -175,7 +183,7 @@ input[type="checkbox"] {
     padding: 30px 10px;
   }
   .title {
-    font-size: 38px;
+    font-size: 28px;
     /* padding-bottom: 13px; */
   }
   input::placeholder {
@@ -199,7 +207,7 @@ input[type="checkbox"] {
     padding-left: 7px;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 374px) {
   .modal {
     align-items: center;
     display: flex;
@@ -220,8 +228,8 @@ input[type="checkbox"] {
     padding-bottom: 33px;
   }
 }
-@media (min-width: 439px) and (orientation: landscape) {
+@media (min-width: 373px) and (orientation: landscape) {
   .modal {
     display: none;
-}
+  }
 }
